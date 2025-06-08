@@ -1,25 +1,25 @@
-# Streamlit 簡単サンプルアプリ
+# Streamlit Simple Sample App
 
-このリポジトリでは、Python ライブラリの Streamlit を使ったシンプルな Web アプリの例を紹介しています。
-
----
-
-## ✅ 概要
-
-Streamlit は、Python コードだけでデータアプリケーションを作成できるオープンソースのライブラリです。
+This repository provides an example of a simple web application using the Python library Streamlit.
 
 ---
 
-## 🧰 必要な環境
+## ✅ Overview
 
-* Python 3.7 以上
+Streamlit is an open-source library that allows you to build data applications using only Python code.
+
+---
+
+## 🧰 Requirements
+
+* Python 3.7 or later
 * pip
 
 ---
 
-## 📦 インストール方法
+## 📦 Installation
 
-以下のコマンドで必要なライブラリをインストールできます：
+You can install the required library using the following command:
 
 ```bash
 pip install streamlit
@@ -27,68 +27,75 @@ pip install streamlit
 
 ---
 
-## 🚀 アプリの実行方法
+## 🚀 How to Run the App
 
-以下のコマンドでアプリを起動します：
+Start the app with the following command:
 
 ```bash
 streamlit run run.py
 ```
 
-実行後、
-http://localhost:8501
-にアクセスしてください
+After execution, access:
+[http://localhost:8501](http://localhost:8501)
 
 ---
 
-## ⚠️ うまく動かない場合
+## ⚠️ If the App Doesn't Work Properly
 
-以下のコマンドを実行して
+Run the following command:
+
 ```bash
 streamlit config show > ~/.streamlit/config.toml
 ```
 
-お好きなエディタ(ここではnano)で~/.streamlit/config.tomlを開いて
-以下の部分を修正、もしくは追加
+Open `~/.streamlit/config.toml` in your preferred editor (e.g., nano):
+
 ```bash
 nano ~/.streamlit/config.toml
 ```
-```~/.streamlit/config.toml
+
+Add or modify the following settings:
+
+```toml
 [server]
 headless = true
 enableCORS = false
 port = 8501
 address = "0.0.0.0"
 ```
-再実行
+
+Then run again:
+
 ```bash
 streamlit run run.py
 ```
+
 ---
 
-## 📁 ファイル構成
+## 📁 File Structure
 
 ```
 .
-├── app.py         # Streamlit アプリの本体
-├── requirements.txt  # 使用ライブラリ一覧（任意）
-└── README.md      # 本ファイル
+├── app.py             # Main Streamlit app file
+├── requirements.txt   # List of required libraries (optional)
+├── README_ja.md
+└── README.md          # This file
 ```
 
 ---
 
-## 📌 補足
+## 📌 Additional Notes
 
-Streamlit は高速なプロトタイピングやデータ可視化に非常に便利です。
-より複雑なアプリやカスタマイズも可能ですので、ぜひ活用してください。
+Streamlit is very useful for rapid prototyping and data visualization.
+It also supports creating more complex and customized applications.
+Please feel free to explore its capabilities.
 
 ---
 
-## 📚 参考
+## 📚 References
 
 * [https://streamlit.io/](https://streamlit.io/)
 
 ---
 
-ご不明点があれば issue を立ててください。
-
+If you have any questions, please open an issue.
